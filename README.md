@@ -1,15 +1,5 @@
-# Elysia with Bun runtime
+# OpenFoodDataset
+This is our own api interface for the data provided by [Open Food Facts](https://github.com/openfoodfacts), an open, collaborative, and free dataset for food products.
 
-## Getting Started
-To get started with this template, simply paste this command into your terminal:
-```bash
-bun create elysia ./elysia-example
-```
-
-## Development
-To start the development server run:
-```bash
-bun run dev
-```
-
-Open http://localhost:3000/ with your browser to see the result.
+### Motivation 
+The OpenFoodFacts website and API are quite slow to use and would not work for our intended purposes. Additionally, we did not want to further stress the network nor compete with their open source product (which is totally awesome), which is why we host our own mirror of the API with our own functionality implemented.
