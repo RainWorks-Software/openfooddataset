@@ -10,4 +10,6 @@ The data processing is done with [shardjsonl.ts](../scripts/shardjsonl.ts) which
 The ``totalRoughly`` variable is only for percentages and does not accurately represent the actual amount of lines in the file. The number is taken from the [Hugging Face Dataset](https://huggingface.co/datasets/openfoodfacts/product-database) from the Parquet data rows.
 
 ### Downloading OFDjson
-The archive can be downloaded [here](). Keep in mind that it is compressed using gzip compression level -9, and that once uncompressed, the ``products/`` folder takes about ~65GB of storage uncompressed.
+The archive can be downloaded [here](https://drive.google.com/uc?export=download&id=1r4LusurIrdr-vPZU0xL18lpu3NCl-p-R)*. Keep in mind that it is compressed using gzip compression level -9, and that once uncompressed, the ``products/`` folder takes about ~65GB of storage uncompressed.
+
+\**this link is from my school's Google Drive, since they offer me unlimited storage.*
