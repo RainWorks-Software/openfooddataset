@@ -6,10 +6,12 @@
     "dev": "bun run --watch src/index.ts"
   },
   "dependencies": {
-    "@dsnp/parquetjs": "^1.8.6",
-    "elysia": "latest"
+    "bson": "^6.10.3",
+    "elysia": "latest",
+    "fast-json-stringify": "^6.0.1"
   },
   "devDependencies": {
+    "@types/bson": "^4.2.4",
     "bun-types": "latest"
   },
   "module": "src/index.js"
