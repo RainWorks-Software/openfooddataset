@@ -6,8 +6,11 @@
     "dev": "bun run --watch src/index.ts"
   },
   "dependencies": {
+    "@elysiajs/swagger": "^1.3.0",
     "bson": "^6.10.3",
     "elysia": "latest",
+    "elysia-http-status-code": "^1.0.9",
+    "elysia-rate-limit": "^4.3.0",
     "fast-json-stringify": "^6.0.1"
   },
   "devDependencies": {
