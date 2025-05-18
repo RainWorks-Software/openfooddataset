@@ -14,4 +14,4 @@ There is no reason to scrape the API for the product data since it is both avail
 All methods can be found under the ``/spec`` url, which is powered by [``@elysiajs/swagger``](https://elysiajs.com/plugins/swagger.html).
 
 ### Credits
-Thank you to [Open Food Facts](https://github.com/openfoodfacts) for the compressive data and ease of downloading such information.
+Thank you to [Open Food Facts](https://github.com/openfoodfacts) for the comprehensive data and ease of downloading such information.
