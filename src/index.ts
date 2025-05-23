@@ -3,6 +3,11 @@ import { dataRoutes } from "./data/get";
 import swagger from "@elysiajs/swagger";
 import { HttpStatusCode } from "elysia-http-status-code";
 import { rateLimit } from "elysia-rate-limit";
+import { opentelemetry } from "@elysiajs/opentelemetry";
+import { BatchSpanProcessor } from "@opentelemetry/sdk-trace-node";
+import { OTLPTraceExporter } from "@opentelemetry/exporter-trace-otlp-proto";
+import { ip } from "elysia-ip";
+import { interceptor } from "./telemetry/interceptor";
 
 const app = new Elysia().get("/", () => "Powered with ElysiaJS.").listen(3000);
 app.use(HttpStatusCode());
@@ -15,6 +20,11 @@ app.use(
         version: "1.0.0",
       },
     },
+  })
+);
+app.use(
+  opentelemetry({
+    spanProcessors: [new BatchSpanProcessor(new OTLPTraceExporter())],
   })
 );
 app.use(
@@ -35,7 +45,9 @@ app.use(
     ),
   })
 );
+app.use(ip({}));
 
+app.use(interceptor);
 app.use(dataRoutes);
 
 if (process.env["PRODUCTS_DIR"] === undefined) {

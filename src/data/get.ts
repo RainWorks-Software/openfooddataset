@@ -2,6 +2,11 @@ import Elysia, { t } from "elysia";
 import { exists, readdir, readFile } from "node:fs/promises";
 import { join } from "node:path";
 
+if (process.env["PRODUCTS_DIR"] === undefined) {
+    console.error("PRODUCTS_DIR is undefined in env.");
+    process.exit(100);
+}
+
 const productsDir = join(process.env["PRODUCTS_DIR"] ?? "");
 export const dataRoutes = new Elysia();
 
