@@ -3,7 +3,7 @@ import fs from "node:fs/promises"
 const logDbPath = process.env["LOG_SQLITE"];
 
 if (logDbPath === undefined) {
-    console.error("LOG_SQLITE is undefined in env.");
-    process.exit(100);
+    console.warn("LOG_SQLITE is undefined in env.");
 }
-export const logDb = new Database(logDbPath, { create: !(await fs.exists(logDbPath))});
+
+export const logDb = new Database(logDbPath ?? ":memory:");
